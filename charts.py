@@ -87,7 +87,9 @@ def fig_e_balls(df1, date1, date2):
     ymask1 = ( df1["Datetime"] >= date1 )
     ymask2 = ( df1["Datetime"] <= date2 )
 
-    gb = df1.groupby(["Resort"]).agg({"SeasonalSum": "sum", "Colors": "min"}).reset_index()
+    df = df1[ymask1 & ymask2]
+
+    gb = df.groupby(["Resort"]).agg({"SeasonalSum": "sum", "Colors": "min"}).reset_index()
     gb["column"] = [1, 2, 1, 2]
     gb["row"] = [1, 1, 2, 2]
 
@@ -109,7 +111,7 @@ def fig_e_balls(df1, date1, date2):
         "xaxis": {"showticklabels": False, "range": [0, 3]}, 
         "yaxis": {"showticklabels": False, "range":[0, 3]}, 
         "clickmode": "select",
-        "title": "Total snowfall as size"
+        "title": "Total snowfall as relative size"
     })
     
     return fig
@@ -123,7 +125,7 @@ def fig_f_bar(df1, date1, date2):
     
     df = df1[mask1 & mask2]
     
-    gb = accum.groupby(["Resort"]).agg({"Total": "sum"}).reset_index()
+    gb = df.groupby(["Resort"]).agg({"Total": "sum"}).reset_index()
     gb = gb.sort_values(by="Resort", ascending=True)
     fig= px.bar(gb, x="Resort", y="Total", color="Resort", color_discrete_sequence=px.colors.sequential.Blues[4:]).update_layout({"clickmode": "select"})
     return fig.update_layout({"title": "Total snowfall, all years", 
