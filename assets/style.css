@@ -1,0 +1,117 @@
+h1 {
+    margin: 0;
+    padding: 0.5em;
+}
+
+/*  cards  */
+
+.knucklepuck {
+    transition: 0.3s;
+
+    -moz-box-shadow: 10px 10px 30px #EEEEEE;
+    -webkit-box-shadow:  10px 10px 30px #EEEEEE;
+    box-shadow:  10px 10px 30px #EEEEEE;
+    margin: 0.5vw;
+
+    background-color: white;
+}
+
+.knucklepuck:hover {
+    box-shadow: 30px 30px 50px 30px #EEEEEE;
+    cursor: default;
+}
+
+
+/*  above the fold  */
+
+.above_title {
+    width: 98vw;
+}
+.bluebirddays {
+    background-color:rgb(8,81,156);
+    color: white;
+}
+
+.above {
+    display: flex;
+    flex-direction: column;
+}
+
+.above_body {
+    display: flex;
+    flex-direction: row;
+    height: 80vh;
+}
+
+.above_body_left {
+    width: 70vw;
+    height: 80vh;
+    /* flex: 2, 2, 2; */
+}
+
+.above_body_right {
+    display: flex;
+    flex-direction: column;
+    width: 28vw;
+    height: 80vh;
+    /* flex: 1, 1, 1 */
+}
+
+.above_body_right_tophalf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28vw;
+    height: 15vh;
+}
+
+.above_body_right_bottomhalf {
+    width: 28vw;
+    height: 60vh;
+}
+
+
+/* forces */
+
+.id_b_scattersubplots {
+    height:75vh;
+}
+
+.id_e_bubbles {
+    width: 27vw;
+    height: 60vh;
+}    
+
+.yearselectorcard {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 27vw;
+    height: 12vh;
+    margin-top:2.7vw;
+    background-color: rgb(107,174,214);
+    border-radius:2em;
+
+}
+
+/* below the fold */
+
+.below {
+    display: flex;
+    height: 80vh;
+    flex-direction:row;
+}
+
+.below_left {
+    width: 28vw;
+}
+
+.below_right {
+    width: 70vw;
+}
+
+/* changing built in styles */
+
+.mantine-YearPickerInput-input {
+    border-radius:2em;
+}
