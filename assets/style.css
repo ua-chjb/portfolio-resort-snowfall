@@ -1,18 +1,22 @@
+/* changing built in styles */
+
 h1 {
     margin: 0;
     padding: 0.5em;
 }
 
-/*  cards  */
+.mantine-YearPickerInput-input {
+    border-radius:2em;
+}
+
+/*  cards */
 
 .knucklepuck {
     transition: 0.3s;
-
     -moz-box-shadow: 10px 10px 30px #EEEEEE;
     -webkit-box-shadow:  10px 10px 30px #EEEEEE;
     box-shadow:  10px 10px 30px #EEEEEE;
     margin: 0.5vw;
-
     background-color: white;
 }
 
@@ -46,7 +50,6 @@ h1 {
 .above_body_left {
     width: 70vw;
     height: 80vh;
-    /* flex: 2, 2, 2; */
 }
 
 .above_body_right {
@@ -54,7 +57,6 @@ h1 {
     flex-direction: column;
     width: 28vw;
     height: 80vh;
-    /* flex: 1, 1, 1 */
 }
 
 .above_body_right_tophalf {
@@ -70,6 +72,21 @@ h1 {
     height: 60vh;
 }
 
+/* below the fold */
+
+.below {
+    display: flex;
+    height: 80vh;
+    flex-direction:row;
+}
+
+.below_left {
+    width: 28vw;
+}
+
+.below_right {
+    width: 70vw;
+}
 
 /* forces */
 
@@ -94,24 +111,5 @@ h1 {
 
 }
 
-/* below the fold */
-
-.below {
-    display: flex;
-    height: 80vh;
-    flex-direction:row;
-}
-
-.below_left {
-    width: 28vw;
-}
-
-.below_right {
-    width: 70vw;
-}
-
-/* changing built in styles */
-
-.mantine-YearPickerInput-input {
-    border-radius:2em;
-}
+/*  iOS developer for watch apps */
+/* if stop replication, then yes */
